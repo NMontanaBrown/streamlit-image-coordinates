@@ -13,10 +13,12 @@ Code: https://github.com/blackary/streamlit-image-coordinates
 
 Streamlit component that displays an image and returns the coordinates when you click on it
 
+The main difference between the upstream repository and this fork is the updated sendValue function in `main.js`, which, after a 100ms delay, resets the component value to `null`. I have modified this to be able to refresh the component value after a click event.
+
 ## Installation instructions
 
 ```sh
-pip install streamlit-image-coordinates
+pip install -e . # Install the package in editable mode
 ```
 
 ## Usage instructions

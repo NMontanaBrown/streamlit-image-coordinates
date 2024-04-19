@@ -5,6 +5,9 @@
 
 function sendValue(value) {
   Streamlit.setComponentValue(value)
+  setTimeout(() => {
+    Streamlit.setComponentValue(null);  // Reset after sending
+  }, 100);  // Short delay to ensure the reset happens after the value is processed
 }
 
 /**
